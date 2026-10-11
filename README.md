@@ -106,7 +106,7 @@ Make sure your `package.json` has these scripts:
 ### 1. Clone into a folder with your own name
 
 ```bash
-git clone https://github.com/yourusername/backend-core.git my-project-name
+git clone https://github.com/smarankhanal/backend.git my-project-name
 cd my-project-name
 ```
 
