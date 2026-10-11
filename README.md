@@ -50,8 +50,8 @@ backend/
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/smarankhanal/backend
-cd backend
+git clone https://github.com/yourusername/backend-core.git
+cd backend-core
 npm install
 ```
 
@@ -65,7 +65,7 @@ Then fill in your values in `.env`. Typical variables for this stack:
 
 ```env
 PORT=8000
-MONGODB_URI=your_mongodb_connection_string
+MONGODB_URI=mongodb://localhost:27017
 CORS_ORIGIN=http://localhost:5173
 
 ACCESS_TOKEN_SECRET=your_access_secret
@@ -77,7 +77,10 @@ CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 
-
+SMTP_HOST=smtp.example.com
+SMTP_PORT=587
+SMTP_USER=your_email
+SMTP_PASS=your_password
 ```
 
 > Keep `.env.sample` in sync with the variables your code actually reads.
@@ -97,6 +100,57 @@ Make sure your `package.json` has these scripts:
   "dev": "nodemon index.js"
 }
 ```
+
+## Use This as Your Own Project
+
+### 1. Clone into a folder with your own name
+
+```bash
+git clone https://github.com/yourusername/backend-core.git my-project-name
+cd my-project-name
+```
+
+### 2. Change the name and author
+
+Edit `package.json`:
+
+```json
+{
+  "name": "my-project-name",
+  "author": "Your Name <your@email.com>",
+  "description": "Your own description"
+}
+```
+
+Or from the terminal:
+
+```bash
+npm pkg set name="my-project-name"
+npm pkg set author="Your Name"
+npm pkg set description="Your own description"
+npm install
+```
+
+### 3. Start your own git history
+
+```bash
+rm -rf .git            # Windows PowerShell: Remove-Item -Recurse -Force .git
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/theirusername/my-project-name.git
+git push -u origin main
+```
+
+To keep the original history and only change where it pushes:
+
+```bash
+git remote set-url origin https://github.com/theirusername/my-project-name.git
+```
+
+### 4. Update the README and license
+
+Replace the project name and repo URLs in `README.md`, and check the `license` field in `package.json`.
 
 ## Usage Examples
 
