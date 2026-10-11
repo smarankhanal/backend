@@ -50,8 +50,8 @@ backend/
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/yourusername/backend-core.git
-cd backend-core
+git clone https://github.com/smarankhanal/backend
+cd backend
 npm install
 ```
 
@@ -65,7 +65,7 @@ Then fill in your values in `.env`. Typical variables for this stack:
 
 ```env
 PORT=8000
-MONGODB_URI=mongodb://localhost:27017
+MONGODB_URI=your_mongodb_connection_string
 CORS_ORIGIN=http://localhost:5173
 
 ACCESS_TOKEN_SECRET=your_access_secret
@@ -77,10 +77,7 @@ CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 
-SMTP_HOST=smtp.example.com
-SMTP_PORT=587
-SMTP_USER=your_email
-SMTP_PASS=your_password
+
 ```
 
 > Keep `.env.sample` in sync with the variables your code actually reads.
